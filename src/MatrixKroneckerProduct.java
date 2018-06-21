@@ -9,6 +9,10 @@ public class MatrixKroneckerProduct implements MatrixOperation {
 
 	@Override
 	public void getResult() {
+		if (isInValidData()) {
+			System.out.println("Cannot get the Kronecker Product for these matrices!");
+			return;
+		}
 		int[][] result = new int[m1.length * m2.length][m1[0].length * m2[0].length];
 		for (int i = 0; i < m1.length; i++) {
 			for (int j = 0; j < m1[0].length; j++) {

@@ -9,6 +9,10 @@ public class MatrixHadamardProduct implements MatrixOperation {
 
 	@Override
 	public void getResult() {
+		if (isInValidData()) {
+			System.out.println("Cannot get the Hadamard Product for these matrices!");
+			return;
+		}
 		int[][] result = new int[m1.length][m1[0].length];
 		for (int i = 0; i < result.length; i++) {
 			for (int j = 0; j < result[0].length; j++) {
